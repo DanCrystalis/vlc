@@ -294,6 +294,11 @@ static void ShowDialog   ( intf_thread_t *, int, int, intf_dialog_args_t * );
 #define PIP_MODE_TEXT N_( "Enable picture-in-picture (PiP) mode" )
 #define PIP_MODE_LONGTEXT N_( "Picture-in-picture mode allows playing video contained in a smaller area so that the interface remains usable." )
 
+#define UI_STYLE_TEXT N_( "Interface style" )
+#define UI_STYLE_LONGTEXT N_( "Selects the look of the interface: the classic style or the redesigned style." )
+static const char *const psz_ui_style_values[] = { "classic", "redesign" };
+static const char *const psz_ui_style_texts[] = { N_("Classic"), N_("Redesign") };
+
 #define ACCENT_COLOR_TEXT N_( "Accent color" )
 #define ACCENT_COLOR_LONGTEXT N_( "Adjusts the accent color, special values are 'default' and 'system' (requires Qt 6.6) ." )
 
@@ -478,6 +483,8 @@ vlc_module_begin ()
     add_float_with_range( "qt-safe-area", 0, 0, 100.0, SAFE_AREA_TEXT, SAFE_AREA_LONGTEXT )
 
     add_string( "qt-accent-color", "default", ACCENT_COLOR_TEXT, ACCENT_COLOR_LONGTEXT )
+    add_string( "qt-ui-style", "classic", UI_STYLE_TEXT, UI_STYLE_LONGTEXT )
+        change_string_list( psz_ui_style_values, psz_ui_style_texts )
 
     cannot_unload_broken_library()
 
