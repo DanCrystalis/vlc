@@ -3,6 +3,7 @@
     "cpp_name": "../style/vlcicons.cpp",
     "qml_prefix": "qrc:///",
     "font_file": "VLCIcons.ttf",
+    "redesign_font_file": "VLCIconsRedesign.ttf",
     "font_name": "VLCIcons",
     "glyphs" : [
         {"key":"active_indicator", "path": "./icons/active_indicator.svg"},

@@ -1295,6 +1295,8 @@ static void *Thread( void *obj )
         char* uiStyle = var_InheritString( p_intf, "qt-ui-style" );
         if( uiStyle && !strcmp( uiStyle, "redesign" ) )
         {
+            /* read by VLCIcons to pick the redesign icon font */
+            app.setProperty( "vlc-ui-style", QStringLiteral( "redesign" ) );
             static const char* const fonts[] = {
                 ":/fonts/inter-latin-400-normal.woff",
                 ":/fonts/inter-latin-ext-400-normal.woff",

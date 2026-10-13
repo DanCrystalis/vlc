@@ -791,6 +791,7 @@ ui_%.h: %.ui
 
 libqt_plugin_la_RES = \
 	pixmaps/VLCIcons.ttf \
+	pixmaps/VLCIconsRedesign.ttf \
 	pixmaps/fonts/inter-latin-400-normal.woff \
 	pixmaps/fonts/inter-latin-ext-400-normal.woff \
 	pixmaps/fonts/inter-latin-500-normal.woff \
