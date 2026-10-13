@@ -100,6 +100,14 @@
     </qresource>
     <qresource prefix="/">
         <file alias="VLCIcons.ttf">pixmaps/VLCIcons.ttf</file>
+        <file alias="fonts/inter-latin-400-normal.woff">pixmaps/fonts/inter-latin-400-normal.woff</file>
+        <file alias="fonts/inter-latin-ext-400-normal.woff">pixmaps/fonts/inter-latin-ext-400-normal.woff</file>
+        <file alias="fonts/inter-latin-500-normal.woff">pixmaps/fonts/inter-latin-500-normal.woff</file>
+        <file alias="fonts/inter-latin-ext-500-normal.woff">pixmaps/fonts/inter-latin-ext-500-normal.woff</file>
+        <file alias="fonts/inter-latin-600-normal.woff">pixmaps/fonts/inter-latin-600-normal.woff</file>
+        <file alias="fonts/inter-latin-ext-600-normal.woff">pixmaps/fonts/inter-latin-ext-600-normal.woff</file>
+        <file alias="fonts/dm-mono-latin-400-normal.woff">pixmaps/fonts/dm-mono-latin-400-normal.woff</file>
+        <file alias="fonts/dm-mono-latin-ext-400-normal.woff">pixmaps/fonts/dm-mono-latin-ext-400-normal.woff</file>
     </qresource>
     <qresource prefix="/prefsmenu">
         <file alias="advprefs_audio.svg">pixmaps/prefs/advprefs_audio.svg</file>

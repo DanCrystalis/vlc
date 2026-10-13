@@ -791,6 +791,14 @@ ui_%.h: %.ui
 
 libqt_plugin_la_RES = \
 	pixmaps/VLCIcons.ttf \
+	pixmaps/fonts/inter-latin-400-normal.woff \
+	pixmaps/fonts/inter-latin-ext-400-normal.woff \
+	pixmaps/fonts/inter-latin-500-normal.woff \
+	pixmaps/fonts/inter-latin-ext-500-normal.woff \
+	pixmaps/fonts/inter-latin-600-normal.woff \
+	pixmaps/fonts/inter-latin-ext-600-normal.woff \
+	pixmaps/fonts/dm-mono-latin-400-normal.woff \
+	pixmaps/fonts/dm-mono-latin-ext-400-normal.woff \
 	pixmaps/addons/addon_default.svg \
 	pixmaps/addons/addon_broken.svg \
 	pixmaps/addons/addon_blue.svg \

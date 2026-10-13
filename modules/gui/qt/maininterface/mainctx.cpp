@@ -264,6 +264,12 @@ MainCtx::MainCtx(qt_intf_t *_p_intf)
     /* Register callback for the intf-popupmenu variable */
     var_AddCallback( libvlc, "intf-popupmenu", PopupMenuCB, p_intf );
 
+    {
+        char* uiStyle = var_InheritString( p_intf, "qt-ui-style" );
+        m_redesign = uiStyle && !strcmp( uiStyle, "redesign" );
+        free( uiStyle );
+    }
+
     if( var_InheritBool( p_intf, "qt-privacy-ask") )
     {
         //postpone dialog call, as composition might not be ready yet

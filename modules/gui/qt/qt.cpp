@@ -122,6 +122,7 @@ extern "C" char **environ;
 #include <vlc_messages.h>
 
 #include <QQuickWindow>
+#include <QFontDatabase>
 #include <QOpenGLContext> // Available in Qt GUI, no need for Qt OpenGL module
 
 #ifndef X_DISPLAY_MISSING
@@ -1289,6 +1290,30 @@ static void *Thread( void *obj )
         app.setWindowIcon( QIcon::fromTheme( "vlc", QIcon( ":/logo/vlc256.png" ) ) );
 
     app.setDesktopFileName( PACKAGE );
+
+    {
+        char* uiStyle = var_InheritString( p_intf, "qt-ui-style" );
+        if( uiStyle && !strcmp( uiStyle, "redesign" ) )
+        {
+            static const char* const fonts[] = {
+                ":/fonts/inter-latin-400-normal.woff",
+                ":/fonts/inter-latin-ext-400-normal.woff",
+                ":/fonts/inter-latin-500-normal.woff",
+                ":/fonts/inter-latin-ext-500-normal.woff",
+                ":/fonts/inter-latin-600-normal.woff",
+                ":/fonts/inter-latin-ext-600-normal.woff",
+                ":/fonts/dm-mono-latin-400-normal.woff",
+                ":/fonts/dm-mono-latin-ext-400-normal.woff",
+            };
+            for( const char* font : fonts )
+                QFontDatabase::addApplicationFont( QString::fromLatin1( font ) );
+
+            QFont font = app.font();
+            font.setFamilies( { QStringLiteral( "Inter" ) } );
+            app.setFont( font );
+        }
+        free( uiStyle );
+    }
 
     DialogErrorModel::getInstance( p_intf );
     VLCDialogModel::getInstance( p_intf );
